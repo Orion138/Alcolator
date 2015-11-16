@@ -36,6 +36,8 @@
 - (IBAction)sliderValueDidChange:(UISlider *)sender {
     UISlider *slider = sender;
     slider.value = roundf(slider.value);
+    [self buttonPressed:(UIButton *) sender];
+    self.navigationController.navigationBar.topItem.title = [NSString stringWithFormat:@"Title(%.1f %@)", self.numberOfWineGlassesForEquivalentAlcoholAmount, self.wineText];
     NSLog(@"Slider value changed to %f", slider.value);
     [self.beerPercentTextField resignFirstResponder];
 }
@@ -54,7 +56,7 @@
     float ouncesInOneWineGlass = 5;  // Wine glasses are usually 5oz
     float alcoholPercentageOfWine = 0.13;  // 13% is average
     float ouncesOfAlcoholPerWineGlass = ouncesInOneWineGlass * alcoholPercentageOfWine;
-    float numberOfWineGlassesForEquivalentAlcoholAmount = ouncesOfAlcoholTotal / ouncesOfAlcoholPerWineGlass;
+    self.numberOfWineGlassesForEquivalentAlcoholAmount = ouncesOfAlcoholTotal / ouncesOfAlcoholPerWineGlass;
     
     // Decide whether to use "beer"/"beers" and "glass"/"glasses"
     NSString *beerText;
@@ -64,15 +66,14 @@
         beerText = NSLocalizedString(@"beers", @"plural of beer");
     }
 
-    NSString *wineText;
-    if (numberOfWineGlassesForEquivalentAlcoholAmount == 1) {
-        wineText = NSLocalizedString(@"glass", @"singular glass");
+    if (self.numberOfWineGlassesForEquivalentAlcoholAmount == 1) {
+        self.wineText = NSLocalizedString(@"glass", @"singular glass");
     } else {
-        wineText = NSLocalizedString(@"glasses", @"plural of glass");
+        self.wineText = NSLocalizedString(@"glasses", @"plural of glass");
     }
     
     // Generate the result text, and display it on the label
-    NSString *resultText = [NSString stringWithFormat:NSLocalizedString(@"%d %@ (with %.2f%% alcohol) contains as much alcohol as %.1f %@ of wine.", nil), numberOfBeers, beerText, [self.beerPercentTextField.text floatValue], numberOfWineGlassesForEquivalentAlcoholAmount, wineText];
+    NSString *resultText = [NSString stringWithFormat:NSLocalizedString(@"%d %@ (with %.2f%% alcohol) contains as much alcohol as %.1f %@ of wine.", nil), numberOfBeers, beerText, [self.beerPercentTextField.text floatValue], self.numberOfWineGlassesForEquivalentAlcoholAmount, self.wineText];
     self.resultLabel.text = resultText;
 }
 
