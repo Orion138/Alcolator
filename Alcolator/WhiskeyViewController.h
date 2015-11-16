@@ -10,4 +10,7 @@
 
 @interface WhiskeyViewController : ViewController
 
+@property (assign) float numberOfWhiskeyGlassesForEquivalentAlcoholAmount;
+@property (weak, nonatomic) NSString *whiskeyText;
+
 @end

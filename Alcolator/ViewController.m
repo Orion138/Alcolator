@@ -37,7 +37,7 @@
     UISlider *slider = sender;
     slider.value = roundf(slider.value);
     [self buttonPressed:(UIButton *) sender];
-    self.navigationController.navigationBar.topItem.title = [NSString stringWithFormat:@"Title(%.1f %@)", self.numberOfWineGlassesForEquivalentAlcoholAmount, self.wineText];
+    self.navigationController.navigationBar.topItem.title = [NSString stringWithFormat:@"Wine(%.1f %@)", self.numberOfWineGlassesForEquivalentAlcoholAmount, self.wineText];
     NSLog(@"Slider value changed to %f", slider.value);
     [self.beerPercentTextField resignFirstResponder];
 }
