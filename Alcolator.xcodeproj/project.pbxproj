@@ -14,6 +14,7 @@
 		168964951BF8DF5200046FFD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 168964941BF8DF5200046FFD /* Images.xcassets */; };
 		168964981BF8DF5200046FFD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 168964961BF8DF5200046FFD /* LaunchScreen.xib */; };
 		168964A41BF8DF5200046FFD /* AlcolatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 168964A31BF8DF5200046FFD /* AlcolatorTests.m */; };
+		168964AF1BF9A6A200046FFD /* WhiskeyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 168964AE1BF9A6A200046FFD /* WhiskeyViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		1689649D1BF8DF5200046FFD /* AlcolatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlcolatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		168964A21BF8DF5200046FFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		168964A31BF8DF5200046FFD /* AlcolatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlcolatorTests.m; sourceTree = "<group>"; };
+		168964AD1BF9A6A200046FFD /* WhiskeyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WhiskeyViewController.h; sourceTree = "<group>"; };
+		168964AE1BF9A6A200046FFD /* WhiskeyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WhiskeyViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +88,8 @@
 				1689648C1BF8DF5200046FFD /* AppDelegate.m */,
 				1689648E1BF8DF5200046FFD /* ViewController.h */,
 				1689648F1BF8DF5200046FFD /* ViewController.m */,
+				168964AD1BF9A6A200046FFD /* WhiskeyViewController.h */,
+				168964AE1BF9A6A200046FFD /* WhiskeyViewController.m */,
 				168964911BF8DF5200046FFD /* Main.storyboard */,
 				168964941BF8DF5200046FFD /* Images.xcassets */,
 				168964961BF8DF5200046FFD /* LaunchScreen.xib */,
@@ -220,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				168964901BF8DF5200046FFD /* ViewController.m in Sources */,
+				168964AF1BF9A6A200046FFD /* WhiskeyViewController.m in Sources */,
 				1689648D1BF8DF5200046FFD /* AppDelegate.m in Sources */,
 				1689648A1BF8DF5200046FFD /* main.m in Sources */,
 			);
