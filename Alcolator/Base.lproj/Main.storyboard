@@ -20,11 +20,18 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="???" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T7I-5S-hwe">
                                 <rect key="frame" x="31" y="187" width="113" height="26"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="26" id="DJz-Ee-prD"/>
                                     <constraint firstAttribute="width" constant="113" id="EZG-66-Se2"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="DJz-Ee-prD"/>
+                                        <exclude reference="EZG-66-Se2"/>
+                                    </mask>
+                                </variation>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="% Alcohol Content per Beer" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3hK-5d-6H1">
                                 <rect key="frame" x="16" y="8" width="568" height="30"/>
@@ -42,6 +49,9 @@
                             </slider>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pk5-hN-uAc">
                                 <rect key="frame" x="244" y="116" width="113" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="113" id="lEI-Zt-lkq"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
                                 <state key="normal" title="Calculate">
                                     <color key="titleColor" red="1" green="0.50196081399917603" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -69,8 +79,11 @@
                             <constraint firstItem="pk5-hN-uAc" firstAttribute="centerX" secondItem="S2M-Ia-vko" secondAttribute="centerX" constant="0.5" id="T67-Gs-m4R"/>
                             <constraint firstItem="T7I-5S-hwe" firstAttribute="top" secondItem="pk5-hN-uAc" secondAttribute="bottom" constant="26" id="ZhK-CE-wjw"/>
                             <constraint firstItem="3hK-5d-6H1" firstAttribute="centerX" secondItem="S2M-Ia-vko" secondAttribute="centerX" id="cZv-ie-yTp"/>
+                            <constraint firstItem="pk5-hN-uAc" firstAttribute="width" secondItem="T7I-5S-hwe" secondAttribute="width" id="ek7-z2-6x7"/>
                             <constraint firstItem="T7I-5S-hwe" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="15" id="nFu-eE-6XZ"/>
                             <constraint firstItem="3hK-5d-6H1" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" id="nHD-a2-sVc"/>
+                            <constraint firstItem="pk5-hN-uAc" firstAttribute="width" secondItem="T7I-5S-hwe" secondAttribute="width" id="q2C-bf-W7r"/>
+                            <constraint firstItem="T7I-5S-hwe" firstAttribute="top" secondItem="S2M-Ia-vko" secondAttribute="bottom" constant="111" id="rid-Va-40q"/>
                             <constraint firstItem="S2M-Ia-vko" firstAttribute="top" secondItem="3hK-5d-6H1" secondAttribute="bottom" constant="8" id="vre-ew-hWT"/>
                         </constraints>
                         <variation key="default">
@@ -79,9 +92,11 @@
                                 <exclude reference="HGU-Uh-3Ji"/>
                                 <exclude reference="JGs-ZN-EMf"/>
                                 <exclude reference="Mhd-BR-xa4"/>
+                                <exclude reference="ZhK-CE-wjw"/>
                                 <exclude reference="2gO-zA-lYM"/>
                                 <exclude reference="JDF-qC-joZ"/>
                                 <exclude reference="RQR-u4-cLO"/>
+                                <exclude reference="ek7-z2-6x7"/>
                             </mask>
                         </variation>
                         <connections>
@@ -125,6 +140,11 @@
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="bEN-z0-saL"/>
+                                    </mask>
+                                </variation>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="% Alcohol Content per Beer" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eJq-gU-zt8">
                                 <rect key="frame" x="16" y="8" width="568" height="30"/>
@@ -142,6 +162,9 @@
                             </slider>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3De-j5-6uh">
                                 <rect key="frame" x="244" y="116" width="113" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="113" id="2Gh-3c-LnL"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
                                 <state key="normal" title="Calculate">
                                     <color key="titleColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
