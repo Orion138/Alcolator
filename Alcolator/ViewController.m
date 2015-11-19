@@ -36,7 +36,6 @@
 - (IBAction)sliderValueDidChange:(UISlider *)slider {
     slider.value = roundf(slider.value);
     NSLog(@"Slider value changed to %f", slider.value);
-    [self.tabBarItem setBadgeValue:[NSString stringWithFormat:@"%d", (int) slider.value]];
     [self updateViewForWine];
 }
 
@@ -63,6 +62,7 @@
 - (void)updateViewForWine {
     int wineCalculation = [self calculateByOunces:5 andPercent:0.13];
     [self updateViewWith:wineCalculation andDrinkName:@"Wine"];
+    [self.tabBarItem setBadgeValue:[NSString stringWithFormat:@"%d", wineCalculation]];
 }
 
 

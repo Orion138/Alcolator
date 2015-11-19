@@ -28,6 +28,7 @@
 - (void)updateViewForWhiskey {
     int calculation = [self calculateByOunces:1.5 andPercent:0.4];
     [self updateViewWith:calculation andDrinkName:@"Whiskey"];
+    [self.tabBarItem setBadgeValue:[NSString stringWithFormat:@"%d", calculation]];
 }
 
 @end
